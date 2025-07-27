@@ -1,3 +1,4 @@
+
 package factory;
 
 import java.time.Duration;
@@ -25,14 +26,13 @@ public class DriverFactory {
 		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			//DriverManager.setDriver(driver); //merging of driver factory & driver manager
 
 
 		} else if(browserName.equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			//DriverManager.setDriver(driver); //merging of driver factory & driver manager
+
 		}
 
 		else {
@@ -41,20 +41,15 @@ public class DriverFactory {
 
 		}
 		
-		//merging of driver factory & driver manager
-		
-//		DriverManager.getDriver().manage().window().maximize();
-//		DriverManager.getDriver().manage().deleteAllCookies();
-//		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+      
       //  return the driver in normal case by giving the return type as WebDriver in method definition
       
       //return driver;
 		
-  	 // set the driver returned to threadlocal variable - finally setting the value of driver to threadlocal variable
+  	 // set the driver returned to threadlocal variable
   		
   		 DriverManager.setDriver(driver);
 		
@@ -71,8 +66,7 @@ public class DriverFactory {
 	//			
 	//		case "firefox":{
 	//			WebDriverManager.firefoxdriver().setup();
-	//			driver = new 
-
+	//			driver = new FirefoxDriver();
 	//	          break;}	
 	//	
 	//		default: { throw new IllegalArgumentException ("Unsupported browser: " + browserName);}
@@ -80,10 +74,7 @@ public class DriverFactory {
 	//		}
 
 		
-		
+	}}
 
 
 
-}
-
-}
