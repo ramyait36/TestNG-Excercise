@@ -1,5 +1,5 @@
 # Ignore TestNG output
-test-output/
+testng/test-output/
 
 # Ignore Eclipse files
 *.class
