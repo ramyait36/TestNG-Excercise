@@ -1,0 +1,16 @@
+# Ignore TestNG output
+test-output/
+
+# Ignore Eclipse files
+*.class
+*.log
+.settings/
+.project
+.classpath
+
+# Ignore Maven build directory
+target/
+
+# Ignore IntelliJ/VSCode files if using
+.idea/
+.vscode/
